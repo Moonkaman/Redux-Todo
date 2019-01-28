@@ -1,5 +1,18 @@
 const initialState = {
-  todos: []
+  todos: [
+    {
+      value: 'Walk the dog.',
+      completed: false
+    },
+    {
+      value: 'Buy eggs',
+      completed: false
+    },
+    {
+      value: 'Pay Bills',
+      completed: false
+    }
+  ]
 }
 
 const reducer = (state = initialState, action) => {

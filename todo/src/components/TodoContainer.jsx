@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class TodoContainer extends Component {
+import TodoList from "./TodoList";
+class TodoContainer extends Component {
   state = {
     todoInput: ""
   };
@@ -8,8 +10,19 @@ export default class TodoContainer extends Component {
   render() {
     return (
       <div>
-        <h1>TodoContainer</h1>
+        <TodoList todos={this.props.todos} />
       </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    todos: state.todos
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  {}
+)(TodoContainer);
