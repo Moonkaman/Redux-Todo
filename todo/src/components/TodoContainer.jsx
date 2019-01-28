@@ -32,6 +32,7 @@ class TodoContainer extends Component {
         <TodoForm
           todoInput={this.state.todoInput}
           handleChange={this.handleChange}
+          addTodo={this.addTodo}
         />
       </div>
     );

@@ -10,7 +10,7 @@ const TodoForm = props => {
         type="text"
         placeholder="Todo..."
       />
-      <button>Add Todo</button>
+      <button onClick={props.addTodo}>Add Todo</button>
     </form>
   );
 };
