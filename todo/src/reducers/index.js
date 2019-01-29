@@ -1,4 +1,4 @@
-import { ADD_TODO,COMPLETE_TODO } from '../actions';
+import { ADD_TODO,TOGGLE_TODO } from '../actions';
 
 const initialState = {
   todos: [
@@ -31,7 +31,7 @@ const reducer = (state = initialState, action) => {
         ]
       }
 
-    case COMPLETE_TODO:
+    case TOGGLE_TODO:
       return {
         ...state,
         todos: state.todos.map((todo,index) => {

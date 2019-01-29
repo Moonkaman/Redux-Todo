@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { addTodo, completeTodo } from "../actions";
+import { addTodo, toggleTodo } from "../actions";
 
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
@@ -25,15 +25,15 @@ class TodoContainer extends Component {
     });
   };
 
-  completeTodo = (e, index) => {
+  toggleTodo = (e, index) => {
     e.preventDefault();
-    this.props.completeTodo(index);
+    this.props.toggleTodo(index);
   };
 
   render() {
     return (
       <div>
-        <TodoList todos={this.props.todos} completeTodo={this.completeTodo} />
+        <TodoList todos={this.props.todos} toggleTodo={this.toggleTodo} />
         <TodoForm
           todoInput={this.state.todoInput}
           handleChange={this.handleChange}
@@ -52,5 +52,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { addTodo, completeTodo }
+  { addTodo, toggleTodo }
 )(TodoContainer);
