@@ -3,7 +3,7 @@ import { ADD_TODO,TOGGLE_TODO,CLEAR_TODOS } from '../actions';
 const initialState = {
   todos: [
     {
-      value: 'Walk the dog.',
+      value: 'Walk the dog',
       completed: false
     },
     {

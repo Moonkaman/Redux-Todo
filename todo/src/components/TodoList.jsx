@@ -11,6 +11,7 @@ const TodoList = props => {
           index={index}
           todo={todo}
           key={index}
+          lastTodo={props.todos.length - 1 === index}
         />
       ))}
     </div>

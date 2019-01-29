@@ -6,6 +6,8 @@ import { addTodo, toggleTodo, clearTodos } from "../actions";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 
+import "./Todo.css";
+
 class TodoContainer extends Component {
   state = {
     todoInput: ""
@@ -37,14 +39,17 @@ class TodoContainer extends Component {
 
   render() {
     return (
-      <div>
-        <TodoList todos={this.props.todos} toggleTodo={this.toggleTodo} />
-        <TodoForm
-          todoInput={this.state.todoInput}
-          handleChange={this.handleChange}
-          addTodo={this.addTodo}
-          clearTodos={this.clearTodos}
-        />
+      <div className="todo-top-cont">
+        <h2 className="todo-title">My Todo List</h2>
+        <div className="todo-cont">
+          <TodoList todos={this.props.todos} toggleTodo={this.toggleTodo} />
+          <TodoForm
+            todoInput={this.state.todoInput}
+            handleChange={this.handleChange}
+            addTodo={this.addTodo}
+            clearTodos={this.clearTodos}
+          />
+        </div>
       </div>
     );
   }
