@@ -72,6 +72,10 @@ form input {
   border-top-left-radius: 8px;
 }
 
+form button {
+  transition: background 0.2s ease;
+}
+
 form button:nth-of-type(1) {
   width: 25%;
   border: none;
@@ -83,6 +87,10 @@ form button:nth-of-type(1) {
   border-top-right-radius: 8px;
   cursor: pointer;
   padding: 10px 0;
+}
+
+form button:nth-of-type(1):hover {
+  background: #22b860;
 }
 
 form button:nth-of-type(2) {
@@ -97,4 +105,8 @@ form button:nth-of-type(2) {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   cursor: pointer;
+}
+
+form button:nth-of-type(2):hover {
+  background: rgb(231, 85, 74);
 }
