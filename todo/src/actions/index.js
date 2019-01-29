@@ -9,7 +9,6 @@ export const addTodo = todo => {
 }
 
 export const completeTodo = (index) => {
-  console.log(index)
   return {
     type: COMPLETE_TODO,
     payload: index

@@ -36,7 +36,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         todos: state.todos.map((todo,index) => {
             if(index === action.payload) {
-              console.log(index, action.payload);
               return {
                 ...todo,
                 completed: !todo.completed

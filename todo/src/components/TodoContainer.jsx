@@ -27,7 +27,6 @@ class TodoContainer extends Component {
 
   completeTodo = (e, index) => {
     e.preventDefault();
-    console.log("yo");
     this.props.completeTodo(index);
   };
 
