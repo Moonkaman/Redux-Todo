@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { addTodo, toggleTodo } from "../actions";
+import { addTodo, toggleTodo, clearTodos } from "../actions";
 
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
@@ -30,6 +30,11 @@ class TodoContainer extends Component {
     this.props.toggleTodo(index);
   };
 
+  clearTodos = e => {
+    e.preventDefault();
+    this.props.clearTodos();
+  };
+
   render() {
     return (
       <div>
@@ -38,6 +43,7 @@ class TodoContainer extends Component {
           todoInput={this.state.todoInput}
           handleChange={this.handleChange}
           addTodo={this.addTodo}
+          clearTodos={this.clearTodos}
         />
       </div>
     );
@@ -52,5 +58,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { addTodo, toggleTodo }
+  { addTodo, toggleTodo, clearTodos }
 )(TodoContainer);
